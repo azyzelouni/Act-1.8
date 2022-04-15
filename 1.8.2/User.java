@@ -7,15 +7,15 @@ import java.util.Comparator;
 public class User {
 	
 	String nom;
-	String prénom;
+	String prÃ©nom;
 	String Pseudo;
 	ArrayList<PlayListlmpl> playlist = new ArrayList<PlayListlmpl>();
 	
 	
-	public User(String nom, String prénom, String pseudo, ArrayList<PlayListlmpl> playlist) {
+	public User(String nom, String prÃ©nom, String pseudo, ArrayList<PlayListlmpl> playlist) {
 		super();
 		this.nom = nom;
-		this.prénom = prénom;
+		this.prÃ©nom = prÃ©nom;
 		Pseudo = pseudo;
 		this.playlist = playlist;
 	}
@@ -29,12 +29,12 @@ public class User {
 		this.nom = nom;
 	}
 
-	public String getPrénom() {
-		return prénom;
+	public String getPrÃ©nom() {
+		return prÃ©nom;
 	}
 
-	public void setPrénom(String prénom) {
-		this.prénom = prénom;
+	public void setPrÃ©nom(String prÃ©nom) {
+		this.prÃ©nom = prÃ©nom;
 	}
 
 	public String getPseudo() {
@@ -56,13 +56,13 @@ public class User {
 	
 		 
 
-	//RechercheMusique par titre
+	
 	public Musiquelmpl rechercherMusiqueParTitre(ArrayList<Musiquelmpl> monCompte, String titre) {
 		for (Musiquelmpl musiqueImpl : monCompte) {
 			boolean recherche=false;
 			if (musiqueImpl.getTitre().equals(titre))
 			{recherche=true;
-			System.out.println("Musique trouvé");}
+			System.out.println("Musique trouvÃ©");}
 		else
 			{System.out.println("Aucune musique trouver");}
 
@@ -71,13 +71,13 @@ public class User {
 		
 		return null;
 		}	
-	//RechercheMusique par auteur
+	
 		public Musiquelmpl rechercherMusiqueParAuteur(ArrayList<Musiquelmpl> array, String auteur) {
 			for (Musiquelmpl musiqueImpl : array) {
 				boolean recherche=false;
 				if (musiqueImpl.getAutheur().equals(auteur)) 
 					{recherche=true;
-					System.out.println("Musique trouvé");}
+					System.out.println("Musique trouvÃ©");}
 				else
 					{System.out.println("Aucune musique trouver");}
 
@@ -86,20 +86,20 @@ public class User {
 					
 			return null;
 		}
-		//Afficher les playlist
+		
 		public void Afficherlesplaylist(ArrayList<PlayListlmpl> monCompte) {
 			for(PlayListlmpl pl: monCompte)
 			System.out.println(pl);}
 		
-		   // supprimer musique
+		   
 		public void SupprimerMusique(ArrayList<Musiquelmpl> playlist, String Musique1) {
 			for(Musiquelmpl m: playlist) {
 			if(m.getTitre().equals(Musique1)) {
 			playlist.remove(m);
 			break;}
 			}}
+	
 		
-		//Comparator pour le tri par ordre croissant
 
 				public static Comparator<Musiquelmpl> ComparatorTitreCroissant = new Comparator<Musiquelmpl>() {
 
@@ -111,7 +111,7 @@ public class User {
 						
 						
 
-		// Comparator pour le tri par ordre décroissant
+		
 
 		public static Comparator<Musiquelmpl> ComparatorTitreDecroissant = new Comparator<Musiquelmpl>() {
 
@@ -123,18 +123,18 @@ public class User {
 				
 				
 				
-		// Fonction Affichage playliste dans l'ordre croissant
+		
 			public void triCroissant(ArrayList<Musiquelmpl> arrayList) {
 											
 			Collections.sort(arrayList, ComparatorTitreDecroissant );
-			System.out.println("Affichage de la playliste ordonnée par titre dans l'ordre croissant : "); 
+			System.out.println("Affichage de la playliste ordonnÃ©e par titre dans l'ordre croissant : "); 
 			for (Musiquelmpl e:arrayList) { 
 					System.out.println(e);
 						}}
 
-		// Fonction Affichage playliste dans l'ordre décroissant
+		
 				public void triDeCroissant(ArrayList<Musiquelmpl> arrayList) {
 				Collections.reverse(arrayList);
-				System.out.println("Affichage de la playliste ordonnée dans l'ordre décroissant par titre : ");
+				System.out.println("Affichage de la playliste ordonnÃ©e dans l'ordre dÃ©croissant par titre : ");
 		}
 }
