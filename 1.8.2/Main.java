@@ -24,8 +24,8 @@ public class Main {
 		monCompte.add(pl2);
 		
 		User user1=new User("elouni", "aziz", "aziz2", monCompte);
-		user1.rechercherMusiqueParTitre(Liste1, "Hello");
-		user1.rechercherMusiqueParAuteur(Liste1, "Adele");
+		user1.rechercherMusiqueParTitre(Liste1, "Sweat");
+		user1.rechercherMusiqueParAuteur(Liste1, "Snoopdog");
 		user1.SupprimerMusique(Liste3, "Humble");
 		user1.Afficherlesplaylist(monCompte);
 		user1.triCroissant(Liste1);
